@@ -64,6 +64,15 @@ ul {
     margin-left: 20px;
 }
 
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+    display: none;
+}
+
 .btn {
     cursor: pointer;
     display: inline-block;
@@ -121,7 +130,7 @@ ul {
 }
 
 .home-cards a {
-    display: inline-block;
+    display: block;
     padding-top: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -161,4 +170,122 @@ ul {
     font-size: 20px;
     font-family: 'SegoeUI', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+}
+
+.links {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 25px 0;
+}
+
+.links-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.links li {
+    line-height: 2.8;
+}
+
+.footer {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer div i {
+    margin-right: 10px;
+}
+
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer li {
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+@media (max-width: 950px) {
+    .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .links .links-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 780px) {
+    .menu-btn {
+        display: block;
+    }
+    .menu-btn:hover {
+        opacity: 0.6;
+    }
+    /* TODO move main-nav to show 
+    at burger-btn click 1:01 */
+    .showcase {
+        padding-left: 20px;
+    }
+    .showcase p,
+    .showcase h2 {
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 620px) {
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+    .links .links-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .showcase {
+        padding-left: 8px;
+    }
+    .showcase p {
+        display: none;
+    }
+    .showcase h2 {
+        text-align: start;
+    }
+    .btn {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    .content p {
+        display: none;
+    }
+    /* .outlook {
+        background: url('./img/outlook2.png') no-repeat right center/cover;
+    } */
 }
