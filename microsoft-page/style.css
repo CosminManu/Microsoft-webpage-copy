@@ -36,9 +36,6 @@ ul {
     font-size: 13px;
 }
 
-
-/* latimea logoului care o dadeam paint */
-
 .main-nav .logo {
     width: 110px;
 }
@@ -246,8 +243,35 @@ ul {
     .menu-btn:hover {
         opacity: 0.6;
     }
-    /* TODO move main-nav to show 
-    at burger-btn click 1:01 */
+    .main-nav ul.right-menu {
+        margin-right: 50px;
+    }
+    .main-nav ul.main-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        height: 80%;
+        width: 30%;
+        transform: translateX(-1000px);
+        opacity: 0.9;
+        padding: 20px;
+        border-right: #ccc 2px solid;
+        transition: transform 0.5s ease-in-out;
+    }
+    .main-nav ul.main-menu.show {
+        transform: translateX(-20px);
+    }
+    .main-nav ul.main-menu li {
+        padding: 10px;
+        border-bottom: #ccc solid 2px;
+        font-size: 14px;
+    }
+    .main-nav ul.main-menu li:last-child {
+        /* last li element */
+        border-bottom: 0;
+    }
     .showcase {
         padding-left: 20px;
     }
