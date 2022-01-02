@@ -65,7 +65,7 @@ ul {
     cursor: pointer;
     position: absolute;
     top: 20px;
-    left: 15px;
+    right: 10px;
     z-index: 2;
     display: none;
 }
@@ -104,6 +104,30 @@ ul {
 
 .showcase .btn {
     margin-top: 20px;
+}
+
+.carousel {
+    margin: 80px auto;
+}
+
+.carousel ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel ul li {
+    padding: 0 20px;
+}
+
+.carousel a.carousel-btn {
+    /* centrat sau sub img */
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.carousel .carousel-btn:hover {
+    text-decoration: underline;
 }
 
 
@@ -279,6 +303,19 @@ ul {
     .showcase h2 {
         max-width: 200px;
         text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .carousel {
+        margin: 40px auto;
+    }
+    .carousel ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .carousel ul li {
+        padding: 5px 0;
     }
 }
 
